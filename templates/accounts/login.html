@@ -1,0 +1,44 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/css/css.css">
+    <title>Connexion</title>
+</head>
+<body>
+
+    <div class="header text-center w-50 mx-auto py-3 mt-5">
+        <h2 style="color: #54718c;">OnlineStream<i class="fa fa-video"></i></h2>
+        <p>Fugit, distinctio ipsum. Accusantium quae, voluptatem </p>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <form action="" method="post" id="login" class="col-3">
+            <h3 class="text-center mb-4">Connexion</h3>
+            {% csrf_token %}
+            {% if messages %}
+            {% for message in messages %}
+            <p class="bg-danger p-2 text-white">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            <input type="text" class="form-control" id="email_phone" name="email_phone" placeholder="Email ou Téléphone" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
+            <small>Mot de passe oublié ?</small><br>
+            <button type="submit" class="btn bg-ligth mt-3">Se connecter</button>
+            <hr style="background-color: #ddd;">
+            <small>Vous n'avez pas de compte, <a href="{% url 'register' %}"><u>S'incrire</u></a></small>
+        </form>
+    </div>
+
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

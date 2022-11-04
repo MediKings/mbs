@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/css/css.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container px-0">
+            <div class="col-6 col-md-4 col-lg-2 px-0">
+                <a href="{% url 'home:home' %}" class="navbar-brand">Stream <i class="fa fa-video"></i></a>
+            </div>
+            <div class="col-7 col-lg-5 d-none d-md-block">
+                <form action="" method="get" class="form-inline">
+                    <input type="text" class="form-control" placeholder="Recherche">
+                    <button type="submit" class="btn bg border ml-1"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-2 d-block d-md-none icones ml-auto px-0 justify-self-end">
+                <i class="fa fa-search"></i> &nbsp;
+                <i id="bars" class="fa fa-bars"></i>
+            </div>
+            <div id="menu" class="col-1 col-lg-5 d-none d-lg-block">
+                <ul class="nav">
+                    <!-- <li class="nav-item"><a href="#" class="nav-link">Catégories</a></li> -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a href="/admin/" class="nav-link">Admin</a></li>
+                    <li class="nav-item not ml-3"><a href="{% url 'logout' %}" class="nav-link connexion">Deconnexion</a></li>
+                    {% else %}
+                    <li class="nav-item not ml-3"><a href="{% url 'login' %}" class="nav-link connexion">Connexion</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="container text-center">
+            <h2 class="mt-3 my-3">OnelineStream</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores quisquam in eveniet temporibus necessitatibus, sequi nisi nulla repudiandae sint dolorum placeat id animi fuga, fugiat itaque inventore aspernatur vitae. Explicabo.
+                Quia ipsum explicabo ullam rerum quisquam optio veritatis voluptatibus quas molestias, consectetur maxime, totam laudantium, distinctio natus at eaque! Cumque eligendi a id placeat, sed fugit quaerat temporibus. Neque, dolorum.
+                Nisi libero, officiis quas officia pariatur nulla aspernatur, exercitationem provident laborum earum temporibus facilis quibusdam. Molestias aperiam numquam error pariatur corrupti in deserunt mollitia. Voluptate, sapiente. Voluptas incidunt quos tempore.
+            </p>
+            <p class="mt-5">OnlineStream &copy; Copyrith 2022 by <a href="https://medikings.github.io" target="_blank"><u>Medi King's</u></a></p>
+        </div>
+    </footer>
+
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

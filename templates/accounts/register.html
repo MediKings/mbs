@@ -1,0 +1,47 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/boxicons.min.css">
+    <link rel="stylesheet" href="/static/css/css.css">
+    <title>Inscription</title>
+</head>
+<body>
+
+    <div class="header text-center w-50 mx-auto py-3">
+        <h2 style="color: #54718c;">OnlineStream<i class="fa fa-video"></i></h2>
+        <p>Fugit, distinctio ipsum. Accusantium quae, voluptatem </p>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <form action="" method="post" id="register" class="col-3">
+            <h3 class="text-center mb-4">Inscription</h3>
+            {% if messages %}
+            {% for message in messages %}
+            <p class="w-auto bg-success">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% csrf_token %}
+            <input type="text" class="form-control" name="last_name" placeholder="Prenom" required>
+            <input type="text" class="form-control" name="first_name" placeholder="Nom" required>
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+            <input type="tel" class="form-control" name="phone" placeholder="Téléphone" required>
+            <input type="password" class="form-control" name="password1" placeholder="Mot de passe" required>
+            <input type="password" class="form-control" name="password2" placeholder="Confirmation mot de passe" required>
+            <button type="submit" class="btn bg-ligth mt-3">S'inscrire</button>
+            <hr style="background-color: #ddd;">
+            <small>Vous avez déjà un compte, <a href="{% url 'login' %}"><u>Se connecter</u></a></small>
+        </form>
+    </div>
+
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

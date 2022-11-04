@@ -1,0 +1,11 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+media_images
+# db.sqlite3
+# db.sqlite3-journal
+# media
+
+# <django-project-name>/staticfiles/

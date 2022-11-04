@@ -1,0 +1,155 @@
+body{
+    background-color: #1c262f;
+    color: #ddd;
+}
+.bg{
+    background-color: #222e39;
+    color: #ddd;
+}
+.bg-ligth{
+    background-color: #54718c;
+    color: #ddd;
+}
+a{
+    color: #ddd;
+}
+.navbar{
+    background-color: #222e39;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 999;
+}
+.navbar-brand{
+    color: #54718c;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar form input{
+    width: 80% !important;
+    background-color: #1c262f;
+    color: #ddd;
+}
+.navbar form input:focus{
+    background-color: #1c262f;
+    color: #ddd;
+}
+.navbar .nav-item{
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9;
+}
+.navbar .nav-item:not(.not)::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    height: 0%;
+    width: 100%;
+    background-color: #54718c;
+    transition: all 300ms;
+}
+.navbar .nav-item:hover::before{
+    height: 100%;
+}
+.navbar .nav-item a{
+    color: #ddd;
+    text-transform: uppercase;
+}
+.navbar .nav .connexion{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 4px 15px;
+    transition: 300ms all;
+}
+.navbar .nav .connexion:hover{
+    background-color: #54718c;
+    border: 1px solid #54718c;
+    color: #ddd;
+}
+.navbar .icones i{
+    font-size: 22px;
+}
+.home{
+    margin-top: 80px !important;
+}
+.banner img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.cats .cat{
+    background-color: #54718c;
+    border-radius: 15px;
+    padding: 5px 20px;
+}
+.content section{
+    margin: 10px 0px 30px 0px;
+}
+.content .recent img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+.content .populaire img{
+    float: left;
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    margin-right:20px;
+}
+.content .ep p{
+    background-color: #222e39;
+    padding: 5px 5px 5px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+footer{
+    background-color: #222e39;
+    color: #ddd;
+    padding: 30px 0px;
+}
+#login{
+    background-color: #222e39;
+    padding: 20px;
+    border-radius: 20px;
+}
+#login .form-control{
+    background-color: #1c262f;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#login .form-control:focus{
+    background-color: #1c262f;
+}
+#login button{
+    background-color: #54718c;
+}
+#login button:hover{
+    color: #ddd;
+    font-weight: 600;
+}
+#register{
+    background-color: #222e39;
+    padding: 20px;
+    border-radius: 20px;
+}
+#register input{
+    background-color: #1c262f;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#register input:focus{
+    background-color: #1c262f;
+}
+#register button{
+    background-color: #54718c;
+}
+#register button:hover{
+    color: #ddd;
+    font-weight: 600;
+}

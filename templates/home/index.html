@@ -1,0 +1,294 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}MbStream{% endblock %}
+
+{% block content %}
+        
+    <div class="container home">
+
+        <div class="cats my-2 mt-lg-4">
+            <div class="row">
+                <div class="col-auto">
+                    <p class="cat">Action</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Humour</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Drame</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Amour</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Crime</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Horreur</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Aventure</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Chrétien</p>
+                </div>
+                <div class="col-auto">
+                    <p class="cat">Histoire</p>
+                </div>
+            </div>
+
+            <div class="banner mt-2">
+                <img src="static/img/3.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="content py-3">
+            <section class="recent">
+                <div class="row justify-content-between align-items-center mb-4">
+                    <div class="col-auto">
+                        <h3>Recents</h3>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn text-whites bg">Plus</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <a href="{% url 'home:single' %}">
+                            <img src="static/img/films/adjani.jpeg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/amour_ou_vie.jpg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/chanjo.jpg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/CoverZombie.jpg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/en_route_pour_le_milliard.jpeg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/grave_erreur.jpeg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/in_extremis.jpeg" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
+                        <img src="static/img/films/indelible.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="populaire">
+                <div class="row justify-content-between align-items-center mb-4">
+                    <div class="col-auto">
+                        <h3>Populaire</h3>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-default bg">Plus</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/independance.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/ironie_fatale.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/kongo.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/adjani2.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/la_mani_du_vieux_mafieux.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                        <img src="static/img/films/la_vie_est_belle.jpeg" alt="">
+                        <div class="infos">
+                            <h4>Titre</h4>
+                            <p>Temps</p>
+                            <p>Catégories</p>
+                            <p>Année</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="episodes">
+                <div class="row justify-content-between align-items-center mb-4">
+                    <div class="col-auto">
+                        <h3>Dernières épisodes</h3>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn text-whites bg">Plus</button>
+                    </div>
+                </div>
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E7</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E6</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E5</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Force du destin S2E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E2</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Redemption S1E1</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E7</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E6</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E5</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Force du destin S2E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E2</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Redemption S1E1</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E7</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E6</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La promesse S1E5</b> <br>
+                            <small>22 Jan 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Force du destin S2E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E3</b> <br>
+                            <small>16 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>La chute S1E2</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ep">
+                        <p>
+                            <b>Redemption S1E1</b> <br>
+                            <small>13 Fev 2022</small>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+{% endblock %}
