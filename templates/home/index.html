@@ -8,34 +8,20 @@
     <div class="container home">
 
         <div class="cats my-2 mt-lg-4">
-            <div class="row">
-                <div class="col-auto">
-                    <p class="cat">Action</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Humour</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Drame</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Amour</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Crime</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Horreur</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Aventure</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Chrétien</p>
-                </div>
-                <div class="col-auto">
-                    <p class="cat">Histoire</p>
-                </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        {% for genre in genres %}
+                        <td class="cat p-2">{{genre.name}}</td> &nbsp;
+                        {% endfor %}
+                        {% for genre in genres %}
+                        <td class="cat p-2">{{genre.name}}</td> &nbsp;
+                        {% endfor %}
+                        {% for genre in genres %}
+                        <td class="cat p-2">{{genre.name}}</td> &nbsp;
+                        {% endfor %}
+                    </tr>
+                </table>
             </div>
 
             <div class="banner mt-2">
@@ -55,32 +41,13 @@
                     </div>
                 </div>
                 <div class="row">
+                    {% for serie in series %}
                     <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
                         <a href="{% url 'home:single' %}">
-                            <img src="static/img/films/adjani.jpeg" alt="">
+                            <img src="{{serie.picture.url}}" alt="{{serie.name}}">
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/amour_ou_vie.jpg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/chanjo.jpg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/CoverZombie.jpg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/en_route_pour_le_milliard.jpeg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/grave_erreur.jpeg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/in_extremis.jpeg" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <img src="static/img/films/indelible.jpeg" alt="">
-                    </div>
+                    {% endfor %}
                 </div>
             </section>
             <section class="populaire">

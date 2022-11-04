@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (Home, Single,
-# DetailPost, Films, Series, Documentaires, Emissions, Tele_realites, Search, Genres, Nouveautes
+# DetailPost, Films, Series, Genres
 )
 
 app_name='home'

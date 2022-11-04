@@ -81,6 +81,23 @@ a{
     height: 500px;
     object-fit: cover;
 }
+.cats .table-responsive::-webkit-scrollbar {
+    height: 4px;
+}
+.cats .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 15px;
+}
+.cats .table-responsive::-webkit-scrollbar-track {
+    background: transparent;
+}
+.table{
+    margin-bottom: 0px;
+    color: inherit;
+}
+.table td{
+    border-top: none;
+}
 .cats .cat{
     background-color: #54718c;
     border-radius: 15px;

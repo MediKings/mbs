@@ -9,28 +9,18 @@ from .models import Genre, Serie, Episode
 User = get_user_model()
 
 def Home(request):
+    genres = Genre.objects.all()
+    series = Serie.objects.all().order_by('-date')[:6]
     template_name = 'home/index.html'
-    return render(request, template_name)
+    context = {
+        'genres': genres,
+        'series': series, 
+        }
+    return render(request, template_name, context)
 
 def Single(request):
     template_name = 'home/detail_post.html'
     return render(request, template_name)
-
-
-# def Home(request):
-#     posts = Post.objects.all().order_by('-date')[:6]
-#     randoms = Post.objects.all().order_by('?')[:6]
-#     aside = Post.objects.all().order_by('?')[:6]
-#     genres = Genre.objects.all()
-#     pubs = Pub.objects.all()
-#     context = {
-#         'posts': posts, 
-#         'randoms': randoms, 
-#         'genres': genres, 
-#         'aside': aside,
-#         'pubs': pubs
-#         }
-#     return render(request, 'post/index.html', context)
 
 
 # @login_required
