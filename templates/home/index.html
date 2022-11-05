@@ -43,7 +43,7 @@
                 <div class="row">
                     {% for serie in series %}
                     <div class="col-lg-2 col-md-3 col-4 px-1 mb-3 w-100">
-                        <a href="{% url 'home:single' %}">
+                        <a href="{% url 'home:single' serie.slug %}">
                             <img src="{{serie.picture.url}}" alt="{{serie.name}}">
                         </a>
                     </div>
