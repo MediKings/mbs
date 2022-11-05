@@ -7,7 +7,7 @@ app_name='home'
 
 urlpatterns = [
     path('', Home, name='home'),
-    path('single/', Single, name='single'),
+    path('single/<str:slug>/', Single, name='single'),
     # path('search/', Search, name='search'),
     # path('genre/<slug:genre>/', Genres, name='genre'),
     # path('films/', Films, name='films'),

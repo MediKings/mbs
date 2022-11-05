@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.urls import reverse     
+from django.urls import reverse, set_script_prefix     
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
@@ -18,16 +18,19 @@ def Home(request):
         }
     return render(request, template_name, context)
 
-def Single(request):
-    template_name = 'home/detail_post.html'
-    return render(request, template_name)
+def Single(request, slug):
+    serie = get_object_or_404(Serie, slug=slug)
+    genres = Genre.objects.all()
+    template_name = 'home/detail_serie.html'
+    context = {
+        'serie': serie, 
+        'genres': genres,
+        }
+    return render(request, template_name, context)
 
 
 # @login_required
 # def DetailPost(request, slug):
-#     post = get_object_or_404(Post, slug=slug)
-#     aside = Post.objects.all().order_by('?')[:8]
-#     genres = Genre.objects.all()
 #     template_name = 'post/detail_post.html'
 #     # Commentaires
 #     comments = Comment.objects.filter(post=post).order_by('date')

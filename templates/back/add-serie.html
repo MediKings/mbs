@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}MbStream{% endblock %}
+
+{% block content %}
+        
+    <div class="container home">
+
+        <div class="header w-50 mx-auto py-3 mt-5">
+            <h2 style="color: #54718c;">Ajouter une serie</h2>
+        </div>
+    
+        <div class="d-flex justify-content-center align-items-center mb-4">
+            <div class="col-lg-7">
+                <form action="" method="post" enctype="multipart/form-data" id="login">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn bg-ligth mt-2">Ajouter</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
