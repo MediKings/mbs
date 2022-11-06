@@ -1,6 +1,7 @@
 body{
     background-color: #1c262f;
     color: #ddd;
+    overflow-x: hidden;
 }
 .bg{
     background-color: #222e39;
@@ -81,6 +82,14 @@ a{
     height: 500px;
     object-fit: cover;
 }
+
+/* Banner */
+@media screen and (max-width: 757px){
+    .banner img{
+        height: 300px;
+    }
+}
+
 .cats .table-responsive::-webkit-scrollbar {
     height: 4px;
 }
@@ -103,6 +112,14 @@ a{
     border-radius: 15px;
     padding: 5px 20px;
 }
+
+/* Banner */
+@media screen and (max-width: 757px){
+    .cats .banner{
+        height: 200px;
+    }
+}
+
 .content section{
     margin: 10px 0px 30px 0px;
 }
