@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (Home, Single,
+from .views import (Home, Single, Play
 # DetailPost, Films, Series, Genres
 )
 
@@ -8,13 +8,6 @@ app_name='home'
 urlpatterns = [
     path('', Home, name='home'),
     path('single/<str:slug>/', Single, name='single'),
+    path('play/<str:slug>/', Play, name='play'),
     # path('search/', Search, name='search'),
-    # path('genre/<slug:genre>/', Genres, name='genre'),
-    # path('films/', Films, name='films'),
-    # path('series/', Series, name='series'),
-    # path('documentaires/', Documentaires, name='documentaires'),
-    # path('emissions/', Emissions, name='emissions'),
-    # path('tele_realites/', Tele_realites, name='tele_realites'),
-    # path('nouveautes/', Nouveautes, name='nouveautes'),
-    # path('detail_post/<str:slug>/', DetailPost, name='detail_post'),
 ]

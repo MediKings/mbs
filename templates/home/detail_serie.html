@@ -10,7 +10,7 @@
         <div class="content py-3">
             <div class="row mt-2">
                 <div class="col-md-2">
-                    <img src="{{serie.picture.url}}" alt="{{serie.name}}" class="w-100">
+                    <img src="{{serie.picture}}" alt="{{serie.name}}" class="w-100">
                 </div>
                 <div class="col-md-7">
                     <div class="d-flex align-items-end mb-3">
@@ -31,48 +31,14 @@
                     </div>
                 </div>
                 <div class="row align-items-center">
+                    {% for ep in episodes %}
                     <div class="col-lg-2 col-md-3 ep">
                         <p>
-                            <a href="play.html"><b>S1 E1</b></a> <br>
+                            <a href="{% url 'home:play' ep.slug %}"><b>{{ep.title}}</b></a> <br>
                             <!-- <small>22 Jan 2022</small> -->
                         </p>
                     </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 ep">
-                        <p>
-                            <b>S1 E1</b> <br>
-                            <!-- <small>22 Jan 2022</small> -->
-                        </p>
-                    </div>
+                    {% endfor %}
                 </div>
             </section>
         </div>

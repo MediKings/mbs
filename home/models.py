@@ -8,7 +8,7 @@ User = get_user_model()
 class Serie(models.Model):
     name = models.CharField(max_length=30)
     slug = models.SlugField(unique=True)
-    picture = models.ImageField(upload_to='image/')
+    picture = models.CharField(max_length=100)
     genre = models.ManyToManyField('Genre')
     realisateur = models.CharField(max_length=30)
     date = models.DateTimeField(auto_now_add=True)
@@ -27,7 +27,7 @@ class Episode(models.Model):
     title = models.CharField(max_length=30)
     slug = models.SlugField(unique=True)
     synopsis = models.TextField()
-    video = models.FileField(upload_to='video/')
+    video = models.CharField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

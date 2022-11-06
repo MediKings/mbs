@@ -1,0 +1,66 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Detail Post{% endblock %}
+
+{% block content %}
+        
+<div class="container home">
+    <div class="cats my-2 mt-lg-4">
+        <div class="banner mt-2">
+            <video class="w-100" controls>
+                <source src="{{episode.video}}">
+            </video>
+            <h3 class="">{{episode.serie.name}} {{episode.title}}</h3>
+        </div>
+    </div>
+
+    {% if other_episodes %}
+    <div class="content py-3">
+        <section class="populaire">                
+            <section class="episodes">
+                <div class="row justify-content-between align-items-center mb-4">
+                    <div class="col-auto">
+                        <h5>Autres épisodes</h5>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 ep">
+                        <p>
+                            <b>S1 E2</b> <br>
+                            <!-- <small>22 Jan 2022</small> -->
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 ep">
+                        <p>
+                            <b>S1 E2</b> <br>
+                            <!-- <small>22 Jan 2022</small> -->
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 ep">
+                        <p>
+                            <b>S1 E2</b> <br>
+                            <!-- <small>22 Jan 2022</small> -->
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 ep">
+                        <p>
+                            <b>S1 E2</b> <br>
+                            <!-- <small>22 Jan 2022</small> -->
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 ep">
+                        <p>
+                            <b>S1 E2</b> <br>
+                            <!-- <small>22 Jan 2022</small> -->
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    {% endif %}
+
+</div>
+
+    {% endblock %}
